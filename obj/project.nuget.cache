@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "1vKfLSkA8IirP4i9otriE9uB66JCHuBrxe92974un8tETJnRoxcdRWHFPYqwMN8qXJGqkBX6DLTNCxz85ZfZoA==",
+  "success": true,
+  "projectFilePath": "/Users/wudtichai/Documents/poc/dotnet/grpc/grpc.csproj",
+  "expectedPackageFiles": [
+    "/Users/wudtichai/.nuget/packages/google.protobuf/3.24.3/google.protobuf.3.24.3.nupkg.sha512",
+    "/Users/wudtichai/.nuget/packages/grpc.tools/2.58.0/grpc.tools.2.58.0.nupkg.sha512"
+  ],
+  "logs": []
+}
