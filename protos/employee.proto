@@ -39,3 +39,11 @@ message Address {
   string zip_code=4;
 }
 
+message EmployeeId {
+  int32 id=1;
+}
+
+// defining Servics
+service EmployeeService {
+  rpc GetEmpoyee(EmployeeId) returns (Employee);
+}
