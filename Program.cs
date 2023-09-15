@@ -10,7 +10,7 @@ emp.IsRetired = false;
 var birthdate = new DateTime(1989, 7, 9);
 birthdate = DateTime.SpecifyKind(birthdate, DateTimeKind.Utc);
 emp.BirthDate = Timestamp.FromDateTime(birthdate);
-emp.MaritalStatus = Employee.Types.MaritalStatus.Single;
+// emp.MaritalStatus = Employee.Types.MaritalStatus.Single;
 emp.PreviousEmployers.Add("Microosoft");
 emp.PreviousEmployers.Add("Apple");
 
