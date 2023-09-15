@@ -13,6 +13,11 @@ emp.BirthDate = Timestamp.FromDateTime(birthdate);
 emp.MaritalStatus = Employee.Types.MaritalStatus.Single;
 emp.PreviousEmployers.Add("Microosoft");
 emp.PreviousEmployers.Add("Apple");
+// composition types
+emp.CurrentAddress = new Address();
+emp.CurrentAddress.City = "New York";
+emp.CurrentAddress.StreetName = "Sth Avenue";
+emp.CurrentAddress.HouseNumber = 101;
 
 using (var output = File.Create("emp.dat"))
 {
