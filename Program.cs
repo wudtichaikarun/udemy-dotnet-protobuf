@@ -10,6 +10,9 @@ emp.IsRetired = false;
 var birthdate = new DateTime(1989, 7, 9);
 birthdate = DateTime.SpecifyKind(birthdate, DateTimeKind.Utc);
 emp.BirthDate = Timestamp.FromDateTime(birthdate);
+// it will error Employee' does not contain a definition for 'Age'
+// because file will generate after run code
+emp.Age = 28;
 emp.MaritalStatus = Employee.Types.MaritalStatus.Single;
 emp.PreviousEmployers.Add("Microosoft");
 emp.PreviousEmployers.Add("Apple");
