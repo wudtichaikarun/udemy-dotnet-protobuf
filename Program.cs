@@ -21,6 +21,11 @@ emp.CurrentAddress = new Address();
 emp.CurrentAddress.City = "New York";
 emp.CurrentAddress.StreetName = "Sth Avenue";
 emp.CurrentAddress.HouseNumber = 101;
+// using map
+// Map = Hashtable = Dictionary
+emp.Relatives.Add("father", "John");
+emp.Relatives.Add("mother", "Hannah");
+emp.Relatives.Add("brother", "Dirk");
 
 using (var output = File.Create("emp.dat"))
 {

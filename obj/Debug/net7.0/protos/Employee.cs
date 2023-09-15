@@ -25,22 +25,24 @@ namespace Grpc.Course.Protobuf.Test {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVwcm90b3MvZW1wbG95ZWUucHJvdG8SC2hyLmVudGl0aWVzGh9nb29nbGUv",
-            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIusCCghFbXBsb3llZRIKCgJpZBgB",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvItYDCghFbXBsb3llZRIKCgJpZBgB",
             "IAEoBRISCgpmaXJzdF9uYW1lGAIgASgJEhEKCWxhc3RfbmFtZRgDIAEoCRIS",
             "Cgppc19yZXRpcmVkGAQgASgIEjAKCmJpcnRoX2RhdGUYBSABKAsyGi5nb29n",
             "bGUucHJvdG9idWYuVGltZXN0YW1wSAASDQoDYWdlGAkgASgFSAASLQoPY3Vy",
             "cmVudF9hZGRyZXNzGAYgASgLMhQuaHIuZW50aXRpZXMuQWRkcmVzcxIaChJw",
             "cmV2aW91c19lbXBsb3llcnMYByADKAkSOwoObWFyaXRhbF9zdGF0dXMYCCAB",
-            "KA4yIy5oci5lbnRpdGllcy5FbXBsb3llZS5NYXJpdGFsU3RhdHVzIkEKDU1h",
-            "cml0YWxTdGF0dXMSCgoGU0lOR0xFEAASCwoHTUFSUklFRBABEgwKCERJVk9S",
-            "Q0VEEAISCQoFT1RIRVIQA0IMCgpiaXJ0aF9kYXRhIlQKB0FkZHJlc3MSEwoL",
-            "c3RyZWV0X25hbWUYASABKAkSFAoMaG91c2VfbnVtYmVyGAIgASgFEgwKBGNp",
-            "dHkYAyABKAkSEAoIemlwX2NvZGUYBCABKAlCHKoCGUdycGMuQ291cnNlLlBy",
-            "b3RvYnVmLlRlc3RiBnByb3RvMw=="));
+            "KA4yIy5oci5lbnRpdGllcy5FbXBsb3llZS5NYXJpdGFsU3RhdHVzEjcKCXJl",
+            "bGF0aXZlcxgKIAMoCzIkLmhyLmVudGl0aWVzLkVtcGxveWVlLlJlbGF0aXZl",
+            "c0VudHJ5GjAKDlJlbGF0aXZlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAEiQQoNTWFyaXRhbFN0YXR1cxIKCgZTSU5HTEUQABILCgdN",
+            "QVJSSUVEEAESDAoIRElWT1JDRUQQAhIJCgVPVEhFUhADQgwKCmJpcnRoX2Rh",
+            "dGEiVAoHQWRkcmVzcxITCgtzdHJlZXRfbmFtZRgBIAEoCRIUCgxob3VzZV9u",
+            "dW1iZXIYAiABKAUSDAoEY2l0eRgDIAEoCRIQCgh6aXBfY29kZRgEIAEoCUIc",
+            "qgIZR3JwYy5Db3Vyc2UuUHJvdG9idWYuVGVzdGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Course.Protobuf.Test.Employee), global::Grpc.Course.Protobuf.Test.Employee.Parser, new[]{ "Id", "FirstName", "LastName", "IsRetired", "BirthDate", "Age", "CurrentAddress", "PreviousEmployers", "MaritalStatus" }, new[]{ "BirthData" }, new[]{ typeof(global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Course.Protobuf.Test.Employee), global::Grpc.Course.Protobuf.Test.Employee.Parser, new[]{ "Id", "FirstName", "LastName", "IsRetired", "BirthDate", "Age", "CurrentAddress", "PreviousEmployers", "MaritalStatus", "Relatives" }, new[]{ "BirthData" }, new[]{ typeof(global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Course.Protobuf.Test.Address), global::Grpc.Course.Protobuf.Test.Address.Parser, new[]{ "StreetName", "HouseNumber", "City", "ZipCode" }, null, null, null, null)
           }));
     }
@@ -89,6 +91,7 @@ namespace Grpc.Course.Protobuf.Test {
       currentAddress_ = other.currentAddress_ != null ? other.currentAddress_.Clone() : null;
       previousEmployers_ = other.previousEmployers_.Clone();
       maritalStatus_ = other.maritalStatus_;
+      relatives_ = other.relatives_.Clone();
       switch (other.BirthDataCase) {
         case BirthDataOneofCase.BirthDate:
           BirthDate = other.BirthDate.Clone();
@@ -231,6 +234,21 @@ namespace Grpc.Course.Protobuf.Test {
       }
     }
 
+    /// <summary>Field number for the "relatives" field.</summary>
+    public const int RelativesFieldNumber = 10;
+    private static readonly pbc::MapField<string, string>.Codec _map_relatives_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 82);
+    private readonly pbc::MapField<string, string> relatives_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// using map 
+    /// Map = Hashtable = Dictionary
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Relatives {
+      get { return relatives_; }
+    }
+
     private object birthData_;
     /// <summary>Enum of possible cases for the "birth_data" oneof.</summary>
     public enum BirthDataOneofCase {
@@ -276,6 +294,7 @@ namespace Grpc.Course.Protobuf.Test {
       if (!object.Equals(CurrentAddress, other.CurrentAddress)) return false;
       if(!previousEmployers_.Equals(other.previousEmployers_)) return false;
       if (MaritalStatus != other.MaritalStatus) return false;
+      if (!Relatives.Equals(other.Relatives)) return false;
       if (BirthDataCase != other.BirthDataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -293,6 +312,7 @@ namespace Grpc.Course.Protobuf.Test {
       if (currentAddress_ != null) hash ^= CurrentAddress.GetHashCode();
       hash ^= previousEmployers_.GetHashCode();
       if (MaritalStatus != global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus.Single) hash ^= MaritalStatus.GetHashCode();
+      hash ^= Relatives.GetHashCode();
       hash ^= (int) birthDataCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -345,6 +365,7 @@ namespace Grpc.Course.Protobuf.Test {
         output.WriteRawTag(72);
         output.WriteInt32(Age);
       }
+      relatives_.WriteTo(output, _map_relatives_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -388,6 +409,7 @@ namespace Grpc.Course.Protobuf.Test {
         output.WriteRawTag(72);
         output.WriteInt32(Age);
       }
+      relatives_.WriteTo(ref output, _map_relatives_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -423,6 +445,7 @@ namespace Grpc.Course.Protobuf.Test {
       if (MaritalStatus != global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus.Single) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MaritalStatus);
       }
+      size += relatives_.CalculateSize(_map_relatives_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -457,6 +480,7 @@ namespace Grpc.Course.Protobuf.Test {
       if (other.MaritalStatus != global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus.Single) {
         MaritalStatus = other.MaritalStatus;
       }
+      relatives_.MergeFrom(other.relatives_);
       switch (other.BirthDataCase) {
         case BirthDataOneofCase.BirthDate:
           if (BirthDate == null) {
@@ -528,6 +552,10 @@ namespace Grpc.Course.Protobuf.Test {
             Age = input.ReadInt32();
             break;
           }
+          case 82: {
+            relatives_.AddEntriesFrom(input, _map_relatives_codec);
+            break;
+          }
         }
       }
     #endif
@@ -585,6 +613,10 @@ namespace Grpc.Course.Protobuf.Test {
           }
           case 72: {
             Age = input.ReadInt32();
+            break;
+          }
+          case 82: {
+            relatives_.AddEntriesFrom(ref input, _map_relatives_codec);
             break;
           }
         }
